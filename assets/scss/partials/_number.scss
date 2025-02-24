@@ -1,0 +1,54 @@
+.nmbr{
+    background-color: $primarycolor;
+    .nmbr__container{
+        @include flex(space-between, stretch, row, wrap);
+       
+    
+    
+        .nmbr__items{
+            flex-basis: 22%;
+        
+            .nmbr__items__group{
+                @include flex(center, center, row, nowrap, 20px);
+            
+                .prva{
+                    color: $secondarycolor;
+                    font-size: 2rem;
+                }
+                
+                .group__title{
+                    color: white;
+                    font-size: 3rem;
+                    display: flex;
+                
+                    
+                    .druga{
+                        color: white;
+                        font-size: 2rem;
+                    }
+                }
+            }  
+        
+            .nmbr__p{
+                color: white;
+                text-align: center;
+            }
+        
+            @media(width < 992px){
+            
+                    flex-basis: 50%;
+                }
+       
+                @media(width < 768px){
+                 
+                        flex-basis: 100%;
+                        text-align: center;
+                    }
+            }
+    
+        @media(width < 992px){
+          
+                row-gap: 2rem;
+            }
+    }
+}

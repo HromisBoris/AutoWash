@@ -1,0 +1,101 @@
+.contact{
+    display: flex;
+     justify-content: space-between;
+    
+     .contact__spots{
+         flex-basis:45%;
+     
+         .contact__sports__title2{
+             color: $primarycolor;
+             font-size: 2rem;
+             margin-bottom: 2.5rem;
+         }
+     
+         .contact__item-holder{
+             display: flex;
+             flex-wrap: wrap;
+             gap: 1rem;
+
+             .contact__item{
+                 flex-basis: 45%;
+                 display: flex;
+                 align-items: center;
+                 gap: 1rem;
+                 
+                 i{
+                     color: $secondarycolor;
+                     font-size: 2rem;
+                 }
+             
+                 .contact__info{
+ 
+                    .info__title{
+                         color:$primarycolor;
+                         font-size: 1.2rem;
+                     
+                         @media(width < 576px){
+ 
+                                 font-size: 1.5rem;
+                             }
+                         
+                     }
+                 
+                     .mid{
+                         margin: 0.5rem 0;
+                     }
+                 }
+             }
+         
+             @media(width < 1200px){
+                     flex-direction: column;
+                 }
+         }
+     }
+ 
+     .contact__form{
+         flex-basis:45%;    
+         background-color: $secondarycolor;
+         border-radius: 5px;
+         padding: 2.3rem 1.9rem;
+     
+         .contact__form__title{
+             color: white;
+             font-size: 1.5rem;
+             margin-bottom: 1.2rem;
+         }
+         
+         .contact__form__input{
+             display: block;
+             margin-bottom: 1rem;
+             outline: none;
+             border: 1px solid white;
+             background-color: $secondarycolor;
+             padding:0.7rem;
+             width: 100%;
+             border-radius: 5px;
+             font-size: 1rem;
+             
+             
+             &::placeholder{
+                 color: white;
+             }
+         }
+     
+         .textarea{
+             padding-top: 2rem;
+             padding-bottom: 4rem;
+         }
+     
+         .contact__form__btn{
+             @include btn (white,$secondarycolor, 10px 30px, 1rem, 500, $primarycolor, white, $primarycolor);
+             display: block;
+             text-align: center;
+             outline: none;
+         }
+     }
+ 
+     @media(width < 992px){
+             flex-direction: column;
+             row-gap: 2rem;
+         }
+ }

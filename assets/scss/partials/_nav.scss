@@ -1,0 +1,61 @@
+.nav{
+    background-color: $primarycolor;
+    padding: 1.5rem 0;
+
+    .nav__container{
+        @include flex(space-between);
+    
+        #hamburger{
+            font-size: 2rem;
+            color: white;
+            display: none;
+            cursor: pointer;
+            @media(width < 992px){
+                    display: block;
+                }
+        }
+    
+        .nav__list{
+            display: flex;
+            gap: 2rem;
+        
+            .list__link{
+                color: white;
+                text-transform: capitalize;
+                font-weight: 500;
+             
+                &:hover{
+                    color: $secondarycolor;
+                 }
+            }
+        
+            .active{
+                color: $secondarycolor;
+            }
+        
+            .nav__dropdown{
+                i{
+                    color: white;
+                }   
+            .dropdown__link{
+                    color: white;
+
+            }
+            
+            }
+        
+            @media(width < 992px){
+             
+                    display: none;
+           
+                }
+                .nav__contact{
+                    color: white;
+                }
+        }
+        
+        .nav__btn{
+           @include btn(white, $primarycolor, 10px 30px, 1rem, 500, $secondarycolor, white, $secondarycolor);
+        }
+    }
+}

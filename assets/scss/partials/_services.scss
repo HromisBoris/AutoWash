@@ -1,0 +1,53 @@
+.services{
+
+    .sesrvices__title1{
+        text-align: center;
+    
+        &::after{
+            margin: 10px auto;
+        
+    }
+}
+    .services__title2{
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: $primarycolor;
+        text-align: center;
+      
+        @media(width < 768px){
+                font-size: 2rem;
+            }
+    }
+
+.services__items{
+    @include flex(space-between, stretch, row, wrap);
+
+    .services__items__parts{
+        flex-basis: 22%;
+    /* ukupna sirina svih flex itema prelazi sirinu parent elementa */
+    
+    i{
+        color: $secondarycolor;
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .parts__title{
+        color: $primarycolor;
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    @media(width < 1200px){
+
+            flex-basis: 45%;
+    }
+        
+
+    @media(width < 768px){
+    
+            flex-basis: 100%;
+        }
+}
+}
+}

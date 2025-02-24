@@ -1,0 +1,62 @@
+.about{
+    @include flex(center, center, row, wrap, 2.5rem);
+
+    .abt__img{
+        flex-basis: 40%;
+    
+        img{
+            border-radius: 10px;
+                }
+
+                @media(width < 1200px){
+                    flex-basis: 80%;
+            }
+        
+            @media(width < 576px){
+
+                    flex-basis: 100%;
+                }
+        }
+
+.about__wrapper{
+    flex-basis: 50%;
+
+    .border__header{
+        font-size: 2.3rem;
+        color: $primarycolor;
+        text-transform: capitalize;
+        margin-bottom: 3rem;
+    }
+
+    .border__pp{
+        line-height: 1.7rem;
+        margin-bottom: 2rem;
+    }
+  
+    .about__list{
+        margin-bottom: 3rem;
+    
+        .list__item{
+            margin-bottom: 0.8rem;
+         
+            i{
+                color: $secondarycolor;
+             }
+        }
+    }
+
+    .about__btn{
+        @include btn ($secondarycolor, white, 1.2rem 2.3rem, 1rem, 500, $primarycolor, $secondarycolor, $primarycolor);
+        text-transform: uppercase;
+    }
+
+    @media(width < 1200px){
+        flex-basis: 80%;
+}
+
+@media(width < 576px){
+
+        flex-basis: 100%;
+    }
+}
+}

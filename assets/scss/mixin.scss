@@ -1,0 +1,31 @@
+
+@mixin flex ($justify:center, $align:center, $direction:row, $wrap:nowrap, $gap:0){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+
+@mixin btn ($back, $color, $padding:10px 30px,$font-size:1rem, $font-weight:500, $colorhover:$secondarycolor, $hovercolor:white, $bghover:$primarycolor){
+  background-color: $back;
+  color: $color;
+  padding:$padding;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  border: none;
+  border-radius: 60px;
+  text-transform: capitalize;
+
+  &:hover{
+    box-shadow: inset 300px 0 0 0 $colorhover;
+    color: $hovercolor;
+    background-color: $bghover;
+  
+
+  }
+
+
+}

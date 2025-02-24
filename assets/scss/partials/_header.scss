@@ -1,0 +1,63 @@
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../img/carousel-1.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .header__holder{
+      
+        .header__title1{
+            color:$secondarycolor;
+            font-size: 2rem;
+            letter-spacing: 3px;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            
+            @media(width < 768px){
+            
+                    font-size: 1.5rem;
+        }
+    
+        @media(width < 576px){
+
+            header > .header-holder > h3{
+                font-size: 1rem;
+            }
+        }
+    }
+    .header__title2{
+            color: white;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+       
+            @media(width < 768px){
+              
+                    font-size: 3rem;
+                }
+            
+                @media(width < 576px){
+
+                        font-size: 2rem;
+                    }
+            }
+    
+        .header__p{
+            color: white;
+            margin-bottom: 3rem;
+        }
+    
+        .header__btn{
+            @include btn ($secondarycolor, white, 1.5rem 4rem, 1rem, 500, $primarycolor, $secondarycolor, $primarycolor);
+        }
+    }
+
+    @media(width < 576px){
+
+            height: 70vh;
+        }
+}

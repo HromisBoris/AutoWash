@@ -1,0 +1,98 @@
+.plan{
+    text-align: center;
+
+    .plan__title1::after{
+        margin: auto;
+    }
+
+    .plan__title2{
+        font-size: 2rem;
+        color: $primarycolor;
+    }
+
+    .plan__item-holder{
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+    
+        .mid-a{
+            box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+            padding: 4rem 3rem;
+            
+            .item__title1{
+                color: $secondarycolor;
+            }
+        
+            .item__title2{
+                color: $secondarycolor;
+            }
+        
+            .plan__link{
+                @include btn ($secondarycolor, white, 10px 30px, 1rem, 500,$primarycolor, $secondarycolor, $primarycolor);
+            }
+        }
+    
+        @media(width < 992px){
+                flex-direction: column;
+                align-items: center;
+            }
+    }
+    
+    .plan__item{
+    
+        .item__title1{
+            color: $primarycolor;
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        
+            @media(width < 576px){
+
+                  font-size: 1.2rem;
+                }
+        }
+       
+        .item__title2{
+            margin: 0.7rem 0;
+            font-size: 3rem;
+            color: $primarycolor;
+            justify-content: center;
+            font-weight: 700;
+        
+            span{
+                font-size: 1rem;
+            }
+        
+            @media(width < 576px){
+
+                    font-size: 2rem;
+                }
+        }
+    
+        .item__list{
+            margin-bottom: 2.5rem;
+        
+            .plan__item__list__item:not(:last-child){
+                margin-bottom: 1rem;
+            
+                i{
+                    color: rgb(118, 209, 118);
+                }
+            }
+        }
+    
+        .plan__link{
+            @include btn ($primarycolor, $secondarycolor, 10px 30px,1rem, 500, $secondarycolor, white, $secondarycolor);
+        }
+        @media(width < 992px){
+
+            width: 60%;
+            }
+   
+            @media(width < 768px){
+       
+                    width: 100%;
+                }
+        }
+}

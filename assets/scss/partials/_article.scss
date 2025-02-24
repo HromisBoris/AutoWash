@@ -1,0 +1,83 @@
+.article{
+    .article__title1{
+        text-align: center;
+    
+        &:after{
+            margin: auto;
+        }
+    }
+    
+    .article__title2{
+            text-align: center;
+            font-size: 3rem;
+            color: $primarycolor;
+            margin-bottom: 3rem;
+        }
+    
+        .article__item-holder{
+            @include flex(space-between, stretch, row, wrap);
+        
+            .article__item{
+                flex-basis: 30%;
+            
+                img{
+                    border-radius: 10px;
+                }
+            
+                .article__item__title{
+                    margin-top: 2rem;
+                    margin-bottom: 0.8rem;
+                    font-size: 1.2rem;
+                    color: $primarycolor;
+                }
+            
+                .article__item__p{
+                    margin-bottom: 1rem;
+                }
+            
+               .article__link{
+                    display: flex;
+                    gap: 1.2rem;
+                   
+                    .article__link__p{
+                     
+                        i{
+                            color: grey;
+                            margin-right: 0.3rem;
+                            font-size: 0.8rem;
+                        }
+                    
+                        a{
+                            color: grey;
+                            font-size: 0.8rem;
+                        
+                        
+                            &:hover{
+                                color: red;
+                            }}
+                    
+                        .border{
+                            border-right: 1px solid grey;
+                            padding-right: 1rem;
+                            }
+                    }
+                }
+            
+                @media(width < 1200px){
+    
+                        flex-basis: 45%;
+                    }
+            
+                    @media(width < 768px){
+              
+                            flex-basis: 100%;
+                        }
+                }
+        
+            @media(width < 1200px){
+    
+                    row-gap: 2rem;
+                }
+        }
+    }
+    

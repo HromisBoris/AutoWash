@@ -1,0 +1,55 @@
+.comments{
+    text-align: center;
+
+    .comments__title1::after{
+        margin: auto;
+    }
+    
+    .comments__title2{
+        font-size: 2rem;
+        color: $primarycolor;
+        margin-bottom: 2rem;
+    }   
+
+    .comments__item-holder{
+        @include flex(center, stretch, row, nowrap, 2rem);
+       
+        text-align: left;
+    
+        img{
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+        }
+    
+        .comments__item{
+         
+            .comments__item__title1{
+            color: $primarycolor;
+            font-size: 1.2rem;
+        }
+
+        .comments__item__title2{
+            color: gray;
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+    
+        .comments__item__p{
+
+        i{
+            color: $secondarycolor;
+            margin-right: 1rem;
+            font-size: 1.6rem;
+        }
+    }
+    }
+    
+    @media(width < 1200px){
+
+            flex-direction: column;
+         }
+}
+}   

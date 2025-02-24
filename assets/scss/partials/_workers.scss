@@ -1,0 +1,110 @@
+.workers{
+    .workers__title1{
+        text-align: center;
+        
+        &::after{
+            margin: auto;
+        }
+    }
+
+
+    .workers__title2{
+        text-align: center;
+        color: $primarycolor;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+
+        @media(width < 576px){
+
+                font-size: 1.5rem;
+            }
+        }
+    
+
+    .workers__item-holder{
+        @include flex(space-between, stretch, row, wrap, 1rem);
+        
+        
+    
+        .workers__item{
+            flex-basis: 22%;
+
+            .workers__img-holder{
+
+                img{
+                    vertical-align: bottom;
+                }
+            }
+        
+            .workers__item__list{
+                background-color: $primarycolor;
+                color: white;
+                text-align: center;
+                padding: 2rem 0;
+            
+                .workers__icons{
+                    @include flex(center, stretch, row, nowrap, 0.5rem);
+
+                    margin: auto;
+                    transform: translateY(-3rem);   
+                a{
+                    i{
+                        background-color: $primarycolor;
+                        border-radius: 50%;
+                        width: 35px;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: center;
+                        font-size: 1.2rem;
+                        color: white;
+                    
+                        &:hover{
+                            color: $primarycolor;
+                        }
+                    }
+                }
+            }
+           
+            p:not(:last-child){
+                margin: 0.7rem 0;
+            }   
+       
+            .workers__name{
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+        }
+        
+        .workers__img-holder{
+            overflow: hidden;
+        }
+        &:hover img{
+            transform: scale(1.2);
+            }
+    
+            &:hover .workers__item__list{
+                background-color: $secondarycolor;
+            }
+        
+            &:hover .workers__item__list > .workers__icons > a > i{
+                background-color: $secondarycolor;
+            }
+            
+        
+            @media(width < 1200px){
+
+                    flex-basis: 45%;        
+                 }
+        
+                 @media(width < 768px){
+              
+                        flex-basis: 105%;        
+                     }
+                }
+        
+        @media(width < 1200px){
+             
+            row-gap: 2rem;  
+             }
+    }
+}

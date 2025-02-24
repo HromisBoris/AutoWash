@@ -1,0 +1,121 @@
+.footer{
+    background-color: $primarycolor;
+    
+    .footer__item-holder{
+        @include flex(space-between, stretch, row, wrap);
+        padding: 5rem 0;
+
+        @media(width < 1200px){
+            row-gap: 2rem;
+        }
+
+        .footer__item{
+            flex-basis: 24%;
+
+            @media(width < 1200px){
+                flex-basis: 45%;
+            }
+
+            @media(width < 768px){
+                flex-basis: 100%;
+            }
+        
+            .footer__item__title{
+                color: $secondarycolor;
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+        
+            .footer__item__title__p{
+                color: white;
+                margin-bottom: 1rem;
+            
+                i{
+                    margin-right: 0.5rem;
+                }
+            }
+        
+            .footer__icons{
+                display: flex;
+                gap: 0.5rem;
+            
+                a{
+                    
+                    i{
+                        color: $primarycolor;
+                        background-color: white;
+                        width: 35px; 
+                        line-height: 35px; 
+                        border-radius: 50%; 
+                        text-align: center; 
+                        font-size: 1.6rem;
+                    
+                        &:hover{
+                            background-color: $secondarycolor;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        
+            .footer__a-list{
+                @include flex(flex-start, stretch, column);
+               
+                a{
+                    color: white;
+                
+                    &:hover{
+                        color: $secondarycolor;
+                        letter-spacing: 1px;
+                    }
+                
+                    &:not(:last-child){
+                        margin-bottom: 0.9rem;
+                    }
+                
+                    i{
+                        margin-right: 0.4rem;   
+                    }
+                }
+            }
+        
+            .footer__form{
+            
+                .footer__form__input{
+                    display: block;
+                    width: 100%;
+                    background-color: $primarycolor;
+                    outline: none;
+                    margin-bottom: 1rem;
+                    border: 1px solid white;
+                    padding: 0.8rem 0.8rem;
+                    border-radius: 10px;
+                    color: white;
+                }
+            
+                .footer__form__btn{
+                    @include btn (white, $primarycolor, 10px 30px, 1rem, 500, $secondarycolor, white, $secondarycolor);
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    
+                }
+            }
+        }
+    }
+
+    .footer__copy{
+        color: white;
+        text-align: center;
+        padding-bottom: 2rem;
+       
+        a{
+            color: $secondarycolor;
+        
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}
+    
